@@ -36,11 +36,11 @@ class Scheduler {
 
     _callbackProcess() {
         let finish = false;
-        while (!finish) {
+        do {
             if (this._queue[0] && this._queue[0].at.getTime() <= new Date().getTime()) {
                 this._queue.shift().callback();
             } else finish = true;
-        }
+        } while (!finish);
         this._start();
     }
 
