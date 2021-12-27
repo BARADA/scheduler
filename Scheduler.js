@@ -1,8 +1,8 @@
 const MAXIMUM_DELAY = 2147483647; // maximum that is used for browsers
 const DEFAULT_DELAY = 86400000; // one day
 
-// To schedule a task, call the schedule method, pass there 1: Date, 2: callback function. Return uniq Id for remove if task was scheduled.
-// To set maximum delay: 1. Pass value when creating new instance. 2. Pass value to setMaxDelay of Scheduler
+// To schedule a task, call the schedule method, pass there 1: Date, 2: callback function. Returns uniq Id for remove if task was scheduled.
+// To set maximum allowable delay: 1. Pass value when creating new instance. 2. Call setMaxDelay method with value for Scheduler. This value is in ms.
 class Scheduler {
     // maxDelay = Number
     constructor(maxDelay) {
